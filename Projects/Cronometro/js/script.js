@@ -23,7 +23,7 @@ let lapCount = 0;
 // Format time
 function formatTime(ms) {
   const totalSeconds = Math.floor(ms / 1000);
-  const hours = Math.floor();
+  const hours = Math.floor(ms / 36000);
   const minutes = Math.floor(totalSeconds / 60);
   const seconds = totalSeconds % 60;
   const milleseconds = Math.floor((ms % 1000) / 10);
