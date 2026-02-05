@@ -129,11 +129,17 @@ kbd {
   border-radius: 16px;
 }
 
+.laps h3{
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
 .lap-item {
   display: flex;
   justify-content: space-between;
   padding: 10px;
   border-radius: 8px;
+  color: #fff;
   background: rgba(55, 65, 81, 0.4);
   margin-bottom: 8px;
   font-family: monospace;

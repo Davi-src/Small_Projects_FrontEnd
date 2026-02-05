@@ -5,6 +5,9 @@ const statusText = document.getElementById("status-text");
 // Timer
 const timerEl = document.getElementById("timer");
 
+// Timer Container
+const timerCard = document.getElementById('timer-card')
+
 // Controles
 const toggleBtn = document.getElementById("toggleBtn");
 const resetBtn = document.getElementById("resetBtn");
@@ -23,12 +26,11 @@ let lapCount = 0;
 // Format time
 function formatTime(ms) {
   const totalSeconds = Math.floor(ms / 1000);
-  const hours = Math.floor(ms / 36000);
   const minutes = Math.floor(totalSeconds / 60);
   const seconds = totalSeconds % 60;
   const milleseconds = Math.floor((ms % 1000) / 10);
 
-  return `${String(hours).padStart(2, "0")} : ${String(minutes).padStart(2, "0")} : ${String(seconds).padStart(2, "0")} . ${String(milleseconds).padStart(2, "0")}`;
+  return `${String(minutes).padStart(2, "0")} : ${String(seconds).padStart(2, "0")} . ${String(milleseconds).padStart(2, "0")}`;
 }
 
 function updateUI() {
@@ -36,19 +38,22 @@ function updateUI() {
   lapBtn.disabled = state !== 'running';
 
   if (state === 'running') {
-    toggleBtn.textContent = '⏸ Pausar';
+    toggleBtn.textContent = '⏸️ Pausar';
     toggleBtn.className = 'btn pause';
     statusIndicator.style.background = '#22c55e';
+    timerCard.style.border = '1px solid #22c55e';
     statusText.textContent = 'Rodando';
   } else if (state === 'paused') {
-    toggleBtn.textContent = '▶ Continuar';
+    toggleBtn.textContent = '▶️ Continuar';
     toggleBtn.className = 'btn start';
     statusIndicator.style.background = '#eab308';
+    timerCard.style.border = '1px solid #eab308';
     statusText.textContent = 'Pausado';
   } else {
-    toggleBtn.textContent = '▶ Iniciar';
+    toggleBtn.textContent = '▶️ Iniciar';
     toggleBtn.className = 'btn start';
     statusIndicator.style.background = '#ef4444';
+    timerCard.style.border = 'none';
     statusText.textContent = 'Parado';
   }
 }
@@ -95,7 +100,7 @@ function recordLap() {
 
   lapsList.innerHTML = laps.map((lap, i) => {
     const diff = laps[i + 1]
-      ? `+${formatTime(lap.time - laps[i + 1].time)}`
+      ? `+ ${formatTime(lap.time - laps[i + 1].time)}`
       : "";
     return `
       <div class="lap-item">
