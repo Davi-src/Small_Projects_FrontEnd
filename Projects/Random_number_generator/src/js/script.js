@@ -4,10 +4,10 @@ const maxInput = document.getElementById("max");
 // Controls
 const btnGenerate = document.getElementById("btn-Generate");
 const btnClear = document.getElementById("btn-Clear");
-
+// Container Num Generate
 const currentContainer = document.querySelector(".current-num");
 const currentNum = document.getElementById("current-num");
-
+// Container History
 const historyContainer = document.querySelector(".history");
 const numHistory = document.querySelector(".num-history");
 const noHistory = document.querySelector(".no-history");
@@ -15,7 +15,7 @@ const amount = document.getElementById("amount");
 
 let history = [];
 
-function numbergenerator() {
+function numberGenerator() {
   const min = Number(minInput.value);
   const max = Number(maxInput.value);
 
@@ -73,5 +73,5 @@ function clearAll() {
   currentContainer.style.display = "none";
 }
 
-btnGenerate.addEventListener("click", numbergenerator);
+btnGenerate.addEventListener("click", numberGenerator);
 btnClear.addEventListener("click", clearAll);
