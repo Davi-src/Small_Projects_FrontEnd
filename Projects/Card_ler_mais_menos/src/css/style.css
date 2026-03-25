@@ -1,0 +1,86 @@
+* {
+  padding: 0;margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+}
+
+body {
+  display: flex;
+  align-items: center; justify-content: center;
+  width: 100dvw; height: 100dvh;
+}
+
+.card {
+  width: 20rem;
+  padding: .85rem;
+  display: flex; flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background-color: rgb(171, 198, 214);
+  border-radius: 0.825rem;
+  position: relative;
+}
+
+.checked{
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background-color: rgb(171, 198, 214);
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center; justify-content: center;
+  border-bottom-left-radius: 0.825rem;
+}
+
+.checked input[type="checkbox"] {
+  appearance: none;
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  background-color: none;
+}
+
+input[type="checkbox"]:checked {
+  appearance: auto;
+  background-color: blue;
+  border-color: blue;
+}
+
+.image-card  img{
+  width: 100%;
+  border-radius: 0.25rem;
+}
+
+.content {
+  height: 90px;
+  overflow: hidden;
+}
+
+.action{
+  width: 100%;
+}
+
+.action button {
+  width: 100%;
+  padding: 0.625rem;
+  border-radius: .5rem;
+  background-color: #231C01;
+  color: #FFF5CF;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:focus, button:hover{
+    box-shadow: 0 0 0 3px rgb(92, 36, 4), 0 0 0 4px #fb1;
+}
+
+.text.active .content{
+  height: auto;
+}
+
+.text.active p::before{
+    visibility: hidden;
+}
