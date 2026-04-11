@@ -4,35 +4,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="author" content="Davi_DevRoom">
+  <meta name="author" content="Davi.src">
   <!-- Style-->
   <link rel="stylesheet" href="src/css/style.css">
   <!-- Title -->
-  <title>Contador com Incremento Variável</title>
+  <title>Contador com incremento/decremento variavel</title>
 </head>
 
 <body>
 
-  <div class="container">
-    <h1>Contador</h1>
+  <main class="container">
+    <div class="title">
+      <h1>Contador</h1>
+    </div>
 
-    <p id="counter">0</p>
+    <div class="result">
+      <p id="counter">0</p>
+    </div>
 
     <div class="actions">
       <div class="field">
-        <input class="input" type="number" id="increment" placeholder="Valor do incremento" value="1">
-        <label for="increment" class="label">Valor do incremento</label>
+        <input class="input" type="number" id="value" placeholder="Valor variavel" value="1">
+        <label class="label" for="value">Valor variavel</label>
       </div>
 
       <div class="buttons">
-        <button id="btnSubtract" class="btn">- Subtrair</button>
-        <button id="btnReset" class="btn">(0) Reset</button>
-        <button id="btnSum" class="btn">+ Somar</button>
+        <button id="btn-sub" class="btn">(-) Subtrair</button>
+        <button id="btn-clear" class="btn">0 Zerar</button>
+        <button id="btn-sum" class="btn">(+) Somar</button>
       </div>
     </div>
-  </div>
+  </main>
 
   <script src="src/js/script.js"></script>
+
 </body>
 
 </html>

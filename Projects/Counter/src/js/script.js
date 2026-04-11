@@ -1,30 +1,35 @@
-const countElement = document.getElementById("counter");
-const incrementInput = document.getElementById("increment");
+const countEl = document.getElementById("counter");
+const inputEl = document.querySelector("#value");
 
-// Controls
-const btnSubtract = document.getElementById("btnSubtract");
-const btnReset = document.getElementById("btnReset");
-const btnSum = document.getElementById("btnSum");
+// actions
+const btnSub = document.querySelector("#btn-sub");
+const btnclear = document.querySelector("#btn-clear");
+const btnSom = document.querySelector("#btn-sum");
 
 let counter = 0;
 
-function updateCounter() {
-  countElement.textContent = counter;
+function updateUi() {
+  countEl.textContent = counter;
 }
 
-btnSum.addEventListener("click", () => {
-  const valor = Number(incrementInput.value);
-  counter += valor;
-  updateCounter();
+btnSub.addEventListener("click", () => {
+  const val = Number(inputEl.value);
+
+  counter -= val;
+
+  updateUi();
 });
 
-btnSubtract.addEventListener("click", () => {
-  const valor = Number(incrementInput.value);
-  counter -= valor;
-  updateCounter();
+btnSom.addEventListener("click", () => {
+  const val = Number(inputEl.value);
+
+  counter += val;
+
+  updateUi();
 });
 
-btnReset.addEventListener("click", () => {
+btnclear.addEventListener("click", () => {
   counter = 0;
-  updateCounter();
+
+  updateUi();
 });

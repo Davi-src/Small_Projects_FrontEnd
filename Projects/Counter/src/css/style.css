@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-* {
+*{
   padding: 0; margin: 0;
   box-sizing: border-box;
   border: none;
@@ -14,8 +14,8 @@ input[type="number"]::-webkit-outer-spin-button {
   margin: 0;
 }
 
-body {
-  background-color: #FFF5CF;
+body{
+  background-color: #fff5cf;
   height: 100dvh;
   width: 100dvw;
   display: flex;
@@ -23,7 +23,7 @@ body {
   justify-content: center;
 }
 
-.container {
+.container{
   width: 25rem;
   display: flex;
   flex-direction: column;
@@ -33,22 +33,22 @@ body {
   padding: 2rem;
   background-color: #FF671B;
   border-radius: 0.625rem;
-  box-shadow: 0 25px 20px -5px rgba(0, 0, 0, 0.10),
+  box-shadow: 0 25px 20px -5px rgba(0, 0, 0, 0.10)
               0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
-.container h1 {
+.title h1{
   font-weight: 900;
-  color: #FFF5CF;
+  color: #fff5cf;
 }
 
-.container p {
+.result p{
   font-weight: 700;
   font-size: 3rem;
-  color: #FFF5CF;
+  color: #fff5cf;
 }
 
-.actions {
+.actions{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -65,32 +65,33 @@ body {
   width: 100%;
   padding: 1rem;
   border-radius: 0.5rem;
-  color: #FFF5CF;
+  color: #fff5cf;
   background-color: #231C01;
-  border: 1px solid #FFF5CF;
+  border: 1px solid #fff5cf;
 }
 
+/* Efect label */
 .label {
   position: absolute;
-  color: #FFF5CF;
+  color: #fff5cf;
   top: 50%;
   transform: translateY(-50%);
   left: 1rem;
-  pointer-events: none;
+  position-try-order: none;
 }
 
-.input::placeholder {
-  color: #FFF5CF;
+.input::placeholder{
+  color: #fff5cf;
   opacity: 0;
 }
 
 .input:focus::placeholder{
-  opacity: 1; 
+  opacity: 1;
 }
 
 .input:focus + .label, 
 .input:not(:placeholder-shown) + .label{
-  top: -30%;
+   top: -30%;
   transform: translateY(50%);
   left: 0.5rem;
   font-size: .75rem;
