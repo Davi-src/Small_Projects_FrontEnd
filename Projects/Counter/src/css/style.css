@@ -19,8 +19,10 @@ body{
   height: 100dvh;
   width: 100dvw;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 2rem;
 }
 
 .container{
@@ -121,4 +123,15 @@ body{
 .input:focus, .btn:focus
 .input:hover, .btn:hover{
     box-shadow: 0 0 0 3px #fea, 0 0 0 4px #fb1;
+}
+
+footer{
+  text-align: center;
+  color: #231C01;
+}
+
+footer a{
+  text-decoration: none;
+  cursor: pointer;
+  color: #FF671B;
 }
