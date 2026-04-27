@@ -44,5 +44,4 @@ JavaScript (ES6+) — lógica e interatividade
 
 Projeto desenvolvido para prática de JavaScript puro, reforçando conceitos fundamentais de front-end como controle de estado, eventos, feedback visual e separação de responsabilidades.
 
-[Clique aqui para acessar!](https://daviajax.github.io/Small_Projects_FrontEnd/
-)
+[Clique aqui para acessar!](https://davi-src.github.io/Small_Projects_FrontEnd/)
