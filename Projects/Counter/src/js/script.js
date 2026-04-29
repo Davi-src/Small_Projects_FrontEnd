@@ -16,7 +16,7 @@ btnSub.addEventListener("click", () => {
   const val = Number(inputEl.value);
 
   counter -= val;
-
+  
   updateUi();
 });
 
