@@ -13,9 +13,106 @@
 
 <body>
 
-  <main>
-    
+  <main class="container">
+    <div class="header">
+      <div class="title">
+        <p>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#a855f7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-dices-icon lucide-dices">
+            <rect width="12" height="12" x="2" y="10" rx="2" ry="2" />
+            <path d="m17.92 14 3.5-3.5a2.24 2.24 0 0 0 0-3l-5-4.92a2.24 2.24 0 0 0-3 0L10 6" />
+            <path d="M6 18h.01" />
+            <path d="M10 14h.01" />
+            <path d="M15 6h.01" />
+            <path d="M18 9h.01" />
+          </svg>
+        </p>
+        <h1>
+          Gerador de números aleatórios
+        </h1>
+      </div>
+      <p>
+        defina o intervalo e gere números aleatórios
+      </p>
+    </div>
+
+    <div class="field">
+      <div class="input">
+        <input type="number" id="min" placeholder="Número Mínimo">
+        <label for="min">
+          Número Mínimo
+        </label>
+      </div>
+
+      <div class="input">
+        <input type="number" id="max" placeholder="Número Máximo">
+        <label for="max">
+          Número Máximo
+        </label>
+      </div>
+    </div>
+
+    <div class="buttons">
+      <button id="btn-generate" class="btn btn-generate">
+        <span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-dices-icon lucide-dices">
+            <rect width="12" height="12" x="2" y="10" rx="2" ry="2" />
+            <path d="m17.92 14 3.5-3.5a2.24 2.24 0 0 0 0-3l-5-4.92a2.24 2.24 0 0 0-3 0L10 6" />
+            <path d="M6 18h.01" />
+            <path d="M10 14h.01" />
+            <path d="M15 6h.01" />
+            <path d="M18 9h.01" />
+          </svg>
+        </span>
+        Gerar Número
+      </button>
+
+      <button id="btn-clear" class="btn btn-clear">
+        <span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trash2-icon lucide-trash-2">
+            <path d="M10 11v6" />
+            <path d="M14 11v6" />
+            <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6" />
+            <path d="M3 6h18" />
+            <path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+          </svg>
+        </span>
+        Limpar Tudo
+      </button>
+    </div>
+
+    <div class="current-num">
+      <p>
+        Número Gerado
+      </p>
+      <p id="current-num">
+
+      </p>
+    </div>
+
+    <div class="history">
+      <h2>
+        Histórico (<span id="amount"></span> números gerados)
+      </h2>
+
+      <div class="gen-history">
+        <div class="num-history">
+
+        </div>
+      </div>
+    </div>
+
+    <div class="no-history">
+      <p>
+        Nenhum número gerado ainda. Clique em "Gerar Número" para começar!
+      </p>
+    </div>
+
   </main>
+
+  <footer>
+    <p>By me <a href="https://github.com/Davi-src">&copy;Davi-src</a>.</p>
+  </footer>
+
   <script src="src/js/script.js"></script>
 </body>
 
