@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+  padding: 0; margin: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  font-family: "Inter", sans-serif;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+body{
+  background-color: #fff5cf;
+  height: 100dvh;
+  width: 100dvw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+/*======= Main Card =======*/
+.container{
+  width: 25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #FF671B;
+  border-radius: 0.625rem;
+  box-shadow: 0 25px 20px -5px rgba(0, 0, 0, 0.10)
+              0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/*======= Title =======*/
+.title h1{
+  font-weight: 900;
+  color: #fff5cf;
+}
+
+.result p{
+  font-weight: 700;
+  font-size: 3rem;
+  color: #fff5cf;
+}
+
+/*======= Actions =======*/
+.actions{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.field {
+  width: 100%;
+  position: relative;
+}
+
+.input {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  color: #fff5cf;
+  background-color: #231C01;
+  border: 1px solid #fff5cf;
+}
+
+/*======= Efect Label =======*/
+.label {
+  position: absolute;
+  color: #fff5cf;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 1rem;
+  position-try-order: none;
+}
+
+.input::placeholder{
+  color: #fff5cf;
+  opacity: 0;
+}
+
+.input:focus::placeholder{
+  opacity: 1;
+}
+
+.input:focus + .label, 
+.input:not(:placeholder-shown) + .label{
+   top: -30%;
+  transform: translateY(50%);
+  left: 0.5rem;
+  font-size: .75rem;
+  padding: 0 .5rem;
+  background-color: #231C01;
+  border-radius: .25rem;
+  color: #FFF5CF;
+  transition: all .3s ease-in-out;
+}
+
+/*======= Buttons =======*/
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.btn {
+  padding: 0.625rem;
+  border-radius: .5rem;
+  background-color: #231C01;
+  color: #FFF5CF;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.input:focus, .btn:focus
+.input:hover, .btn:hover{
+    box-shadow: 0 0 0 3px #fea, 0 0 0 4px #fb1;
+}
+
+/*======= Footer =======*/
+footer{
+  text-align: center;
+  color: #231C01;
+}
+
+footer a{
+  text-decoration: none;
+  cursor: pointer;
+  color: #FF671B;
+}
