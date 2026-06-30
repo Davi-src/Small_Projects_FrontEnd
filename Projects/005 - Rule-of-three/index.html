@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Davi-src">
+  <!--======= Style =======-->
+  <link rel="stylesheet" href="src/css/style.css">
+  <!--======= Title =======-->
+  <title>Regra de três simples</title>
+</head>
+
+<body>
+  <main class="container">
+    <header class="title">
+      <span class="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calculator-icon lucide-calculator">
+          <rect width="16" height="20" x="4" y="2" rx="2" />
+          <line x1="8" x2="16" y1="6" y2="6" />
+          <line x1="16" x2="16" y1="14" y2="18" />
+          <path d="M16 10h.01" />
+          <path d="M12 10h.01" />
+          <path d="M8 10h.01" />
+          <path d="M12 14h.01" />
+          <path d="M8 14h.01" />
+          <path d="M12 18h.01" />
+          <path d="M8 18h.01" />
+        </svg>
+      </span>
+      <h1>Regra de três</h1>
+    </header>
+
+
+    <section class="calculate-box">
+      <div class="row">
+        <div class="input-group">
+          <input type="number" id="value-a" placeholder="A">
+          <label for="value-a">A</label>
+        </div>
+
+        <div class="arrow">→</div>
+
+        <div class="input-group">
+          <input type="number" id="value-b" placeholder="B">
+          <label for="value-b">B</label>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="row">
+        <div class="input-group">
+          <input type="number" id="value-c" placeholder="C">
+          <label for="value-c">C</label>
+        </div>
+
+        <div class="arrow">→</div>
+
+        <div class="input-group">
+          <div class="result-box" id="result-box">?</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="buttons">
+      <button class="calculate-btn" id="calculate-btn">
+        Calcular
+      </button>
+
+      <button class="clear-btn" id="clear-btn">
+        Limpar
+      </button>
+    </div>
+
+    <div class="result-message hidden" id="result-message">
+      <p id="result-text"></p>
+    </div>
+
+    <div class="formula">
+      <p>Fórmula: X = (B x C) ÷ A</p>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>By me <a href="https://github.com/Davi-src">&copy;Davi-src</a>.</p>
+  </footer>
+
+  <script src="src/js/script.js"></script>
+</body>
+
+</html>
