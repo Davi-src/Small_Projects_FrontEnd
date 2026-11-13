@@ -8,10 +8,10 @@ const btnClear = document.getElementById("btn-clear");
 const btnSum = document.getElementById("btn-sum");
 
 // Counter
-let counter = 0
+let counter = 0;
 
 function updateUi() {
-  counterEl.textContent = counter
+  counterEl.textContent = counter;
 }
 
 // Event subtraction
@@ -20,15 +20,15 @@ btnSub.addEventListener("click", () => {
 
   counter -= val;
 
-  updateUi()
-})
+  updateUi();
+});
 
 // Event Clear
 btnClear.addEventListener("click", () => {
   counter = 0;
 
-  updateUi()
-})
+  updateUi();
+});
 
 // Event Sum
 btnSum.addEventListener("click", () => {
@@ -36,5 +36,5 @@ btnSum.addEventListener("click", () => {
 
   counter += val;
 
-  updateUi()
-})
+  updateUi();
+});
